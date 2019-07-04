@@ -3,26 +3,24 @@
   <entry>
     <title><![CDATA[Markdown Helper]]></title>
     <url>%2F2019%2F07%2F04%2FMarkdown-Helper%2F</url>
-    <content type="text"><![CDATA[Markdown 需要转义的字符123456789101112\\ 反斜杠\` 反引号\* 星号\_ 下划线\&#123;\&#125; 大括号\[\] 中括号\(\) 小括号\# 井号\+ 加号\- 减号\. 英文句号\! 感叹号]]></content>
+    <content type="text"><![CDATA[Markdown是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~ Markdown 需要转义的字符123456789101112\\ 反斜杠\` 反引号\* 星号\_ 下划线\&#123;\&#125; 大括号\[\] 中括号\(\) 小括号\# 井号\+ 加号\- 减号\. 英文句号\! 感叹号]]></content>
       <tags>
-        <tag>Helper</tag>
+        <tag>Learning</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[NexT Helper]]></title>
     <url>%2F2019%2F07%2F04%2FNexT-Helper%2F</url>
-    <content type="text"><![CDATA[嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客~便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。 1、文章设置给文章增加标签打开文章的.md文件，在最上面写上： 1234title: 文章名称tags: - Tag1 - Tag2 禁用评论打开文章的.md文件，在最上面写上： 1comments: false 设置代码高亮主题NexT 使用 Tomorrow Theme 作为代码高亮，共有5款主题供选择。 默认使用的是 白色的 normal 主题，可选的值有 : normal，night， night blue， night bright， night eighties, 如下图所示： 修改：在NexT下的_config.yml中设置 1highlight_theme: normal 2、菜单设置123456789menu: home: / || home //首页，默认 archives: /archives/ || archive //归档，默认 categories: /categories/ || th //分类 tags: /tags/ || tags //标签 about: /about/ || user //关于 #schedule: /schedule/ || calendar //日程表 #sitemap: /sitemap.xml || sitemap //站点地图 #commonweal: /404/ || heartbeat //公益404 不需要哪个就将其注释掉。 仅仅这设置的话点击后会类似于404，还要添加相应的页面语句。在blog根目录右键打开git bash，利用 123$ hexo new page tags ::新建标签$ hexo new page categories ::新建分类$ hexo new page about ::新建关于 在blog/sourse/下新建相关文件。 3、主题设置我设置的是 pieces， 共有4中可选，默认是Muse。 12345# Schemes# scheme: Muse# scheme: Mistscheme: Pisces# scheme: Gemini 4、头像设置12avatar: url: #/images/avatar.gif 然后将准备好的gif图片放入*next/source/images/中即可。PS：暂时没找到喜欢的图，这个还没弄~]]></content>
+    <content type="text"><![CDATA[嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。 1、文章设置给文章增加标签打开文章的.md文件，在最上面写上： 1234title: 文章名称tags: - Tag1 - Tag2 禁用评论打开文章的.md文件，在最上面写上： 1comments: false 设置代码高亮主题NexT 使用 Tomorrow Theme 作为代码高亮，共有5款主题供选择。 默认使用的是 白色的 normal 主题，可选的值有 : normal，night， night blue， night bright， night eighties, 如下图所示： 修改：在NexT下的_config.yml中设置 1highlight_theme: normal 添加阅读全文按钮只需在文章中你想截止的地方添加 1&lt;!--more--&gt; 2、菜单设置添加模块123456789menu: home: / || home //首页，默认 archives: /archives/ || archive //归档，默认 categories: /categories/ || th //分类 tags: /tags/ || tags //标签 about: /about/ || user //关于 #schedule: /schedule/ || calendar //日程表 #sitemap: /sitemap.xml || sitemap //站点地图 #commonweal: /404/ || heartbeat //公益404 不需要哪个就将其注释掉。 仅仅这设置的话点击后会类似于404，还要添加相应的页面语句。在blog根目录右键打开git bash，利用 123$ hexo new page tags ::新建标签$ hexo new page categories ::新建分类$ hexo new page about ::新建关于 在blog/sourse/下新建相关文件。 添加搜索功能1、安装 hexo-generator-searchdb 插件 1$ npm install hexo-generator-searchdb --save 2、打开 站点配置文件 找到Extensions在下面添加 123456# 搜索search: path: search.xml field: post format: html limit: 10000 3、打开 主题配置文件 找到Local search，将enable设置为true 3、主题设置我设置的是 pieces， 共有4中可选，默认是Muse。 12345# Schemes# scheme: Muse# scheme: Mistscheme: Pisces# scheme: Gemini 4、头像设置12avatar: url: #/images/avatar.gif 然后将准备好的gif图片放入*next/source/images/中即可。PS：暂时没找到喜欢的图，这个还没弄~]]></content>
       <tags>
-        <tag>Testing</tag>
+        <tag>Helper</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[大数整除]]></title>
+    <title><![CDATA[OJ大数整除]]></title>
     <url>%2F2019%2F07%2F04%2Ffirst%2F</url>
-    <content type="text"><![CDATA[大数整除原题链接 http://www.dotcpp.com/oj/problem1074.html 题目描述定理：把一个至少两位的正整数的个位数字去掉，再从余下的数中减去个位数的5倍。当且仅当差是17的倍数时，原数也是17的倍数 。 例如，34是17的倍数，因为3-20=-17是17的倍数；201不是17的倍数，因为20-5=15不是17的倍数。输入一个正整数n，你的任务是判断它是否是17的倍数。 输入输入文件最多包含10组测试数据，每个数据占一行，仅包含一个正整数n（1&lt;=n&lt;=10^100），表示待判断的正整数。n=0表示输入结束，你的程序不应当处理这一行。 输出对于每组测试数据，输出一行，表示相应的n是否是17的倍数。1表示是，0表示否。 样例输入34201209876541317171717171717171717171717171717171717171717171717180 样例输出1010 题目分析：不要用这个定理，否则要处理大数会很麻烦。 直接用小学列式除法的原理，从高位到低位依次读入数字，得到每一次的余数r （r中刷新地保存每次的余数），直到大数所有位数被读一遍。最后判断r是否为0，为0则说明刚好被17整除。 代码：123456789101112131415161718192021#include&lt;iostream&gt;#include&lt;string&gt;using namespace std;int main() &#123; string str; int i; while (cin &gt;&gt; str) &#123; //读入这个大数（2345 if (str[0] == '0') return -1; //为0则退出 int m, r=0; //m表示每一次的被除数，r表示每一次的余数 for (i = 0; i &lt; str.length(); i++) &#123; //遍历这个大数 m = r*10 + str[i] - '0'; //（2,23,64,135 r = m % 17; //（2,6,13,16 &#125; if (r) cout &lt;&lt; '0' &lt;&lt; endl; //r不为0，不能被17整除 else cout &lt;&lt; '1' &lt;&lt; endl; //r为0，能被17整除 &#125; //system("pause"); return 0;&#125;]]></content>
+    <content type="text"><![CDATA[原题链接http://www.dotcpp.com/oj/problem1074.html 题目描述定理：把一个至少两位的正整数的个位数字去掉，再从余下的数中减去个位数的5倍。当且仅当差是17的倍数时，原数也是17的倍数 。 例如，34是17的倍数，因为3-20=-17是17的倍数；201不是17的倍数，因为20-5=15不是17的倍数。输入一个正整数n，你的任务是判断它是否是17的倍数。 输入输入文件最多包含10组测试数据，每个数据占一行，仅包含一个正整数n（1&lt;=n&lt;=10^100），表示待判断的正整数。n=0表示输入结束，你的程序不应当处理这一行。 输出对于每组测试数据，输出一行，表示相应的n是否是17的倍数。1表示是，0表示否。 样例输入34201209876541317171717171717171717171717171717171717171717171717180 样例输出1010 题目分析：不要用这个定理，否则要处理大数会很麻烦。 直接用小学列式除法的原理，从高位到低位依次读入数字，得到每一次的余数r （r中刷新地保存每次的余数），直到大数所有位数被读一遍。最后判断r是否为0，为0则说明刚好被17整除。 代码：123456789101112131415161718192021#include&lt;iostream&gt;#include&lt;string&gt;using namespace std;int main() &#123; string str; int i; while (cin &gt;&gt; str) &#123; //读入这个大数（2345 if (str[0] == '0') return -1; //为0则退出 int m, r=0; //m表示每一次的被除数，r表示每一次的余数 for (i = 0; i &lt; str.length(); i++) &#123; //遍历这个大数 m = r*10 + str[i] - '0'; //（2,23,64,135 r = m % 17; //（2,6,13,16 &#125; if (r) cout &lt;&lt; '0' &lt;&lt; endl; //r不为0，不能被17整除 else cout &lt;&lt; '1' &lt;&lt; endl; //r为0，能被17整除 &#125; //system("pause"); return 0;&#125;]]></content>
       <tags>
-        <tag>Testing</tag>
-        <tag>C++</tag>
         <tag>OJ</tag>
       </tags>
   </entry>
@@ -31,7 +29,7 @@
     <url>%2F2019%2F07%2F02%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <tags>
-        <tag>Testing</tag>
+        <tag>Hello World</tag>
       </tags>
   </entry>
 </search>
