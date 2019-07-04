@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Guofoo&#39;s blog">
 <meta property="og:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-04T12:02:04.980Z">
+<meta property="og:updated_time" content="2019-07-04T13:59:59.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT Helper">
 <meta name="twitter:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
@@ -442,7 +442,7 @@
                 
               
 
-              <time title="创建时间：2019-07-04 13:51:18 / 修改时间：20:02:04" itemprop="dateCreated datePublished" datetime="2019-07-04T13:51:18+08:00">2019-07-04</time>
+              <time title="创建时间：2019-07-04 13:51:18 / 修改时间：21:59:59" itemprop="dateCreated datePublished" datetime="2019-07-04T13:51:18+08:00">2019-07-04</time>
             </span>
           
 
@@ -507,11 +507,11 @@
 
 <p>不需要哪个就将其注释掉。</p>
 <p>仅仅这设置的话点击后会类似于404，还要添加相应的页面语句。在blog根目录右键打开git bash，利用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags         ::新建标签</span><br><span class="line">$ hexo new page categories   ::新建分类</span><br><span class="line">$ hexo new page about        ::新建关于</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags         ::新建标签</span><br><span class="line">$ hexo new page categories   ::新建分类</span><br><span class="line">$ hexo new page about        ::新建关于</span><br></pre></td></tr></table></figure>
 
 <p>在blog/sourse/下新建相关文件。</p>
 <h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><p>1、安装 <a href="https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2Fflashlab%2Fhexo-generator-search" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 
 <p>2、打开 <strong>站点配置文件</strong> 找到<code>Extensions</code>在下面添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 搜索</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
