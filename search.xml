@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js学习笔记]]></title>
+    <url>%2F2019%2F07%2F07%2Fjs%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[分号在 JavaScript 中，用分号来结束语句是可选的。 对代码行进行拆行可以在文本字符串中使用反斜杠对代码行进行换行。下面的例子会正确地显示： 12document.write("你好 \世界!"); 不过，不能像这样拆行： 12document.write \ ("你好世界!"); 注释采用 // 和 /* */ 两种。 变量声明JavaScript 变量均为对象。当您声明一个变量时，就创建了一个新的对象。 当您声明新变量时，可以使用 “new” 来声明其类型（首字母大写）： 12345var carname = new String; //字符串var x = new Number; //数字 var y = new Boolean; //布尔var cars = new Array; //数组var person = new Object; //对象 赋值1var x,y,z=1; x, y 为 undefined， z 为 1。 重新声明如果重新声明 JavaScript 变量，该变量的值不会丢失： 12var carname="Volvo"; var carname; 两条语句执行后，变量 carname 的值依然是 “Volvo”。 生存期局部变量（函数内的变量，只能在函数内部访问它）会在函数运行以后被删除。 全局变量（函数外的变量，网页上的所有脚本和函数都能访问它）会在页面关闭后被删除。 向未声明的 JavaScript 变量分配值如果您把值赋给尚未声明的变量，该变量将被自动作为 window 的一个属性。 这条语句： 1carname="Volvo"; 将声明 window 的一个属性 carname。 非严格模式下给未声明变量赋值创建的全局变量，是全局对象的可配置属性，可以删除。 123456789101112var var1 = 1; // 不可配置全局属性var2 = 2; // 没有使用 var 声明，可配置全局属性console.log(this.var1); // 1console.log(window.var1); // 1delete var1; // false 无法删除console.log(var1); //1delete var2; console.log(delete var2); // trueconsole.log(var2); // 已经删除 报错变量未定义 JavaScript 数组创建名为 cars 的数组： 1234var cars=new Array();cars[0]="Saab";cars[1]="Volvo";cars[2]="BMW"; 或者 (condensed array，压缩数组): 1var cars=new Array("Saab","Volvo","BMW"); 或者 (literal array，文本数组): 1var cars=["Saab","Volvo","BMW"]; JavaScript 对象对象由花括号分隔。对象的属性以 name : value 的形式来定义。属性由逗号分隔： 123456789var person=&#123; firstname : "John", //在对象中写属性 lastname : "Doe", id : 5566, fullName : function() //在对象中写方法 &#123; return this.firstName + " " + this.lastName; &#125;&#125;; 对象属性有两种寻址方式： 12name = person.lastname;name = person["lastname"]; 调用对象的方法： 123456name = person.fullName(); //执行函数，返回：John Doename = person.fullName; //返回：function() &#123; return this.firstName + " " + this.lastName; &#125;//调用方法时，不加括号，返回的是函数代码（相当于把方法看成属性了） Undefined 和 NullUndefined ：表示变量不含有值。 可以将变量的值设置为 null 来清空变量。 箭头函数有意思，还没看，待补充…：）]]></content>
+      <tags>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown Helper]]></title>
     <url>%2F2019%2F07%2F04%2FMarkdown-Helper%2F</url>
     <content type="text"><![CDATA[Markdown是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~ Markdown 需要转义的字符123456789101112\\ 反斜杠\` 反引号\* 星号\_ 下划线\&#123;\&#125; 大括号\[\] 中括号\(\) 小括号\# 井号\+ 加号\- 减号\. 英文句号\! 感叹号]]></content>
