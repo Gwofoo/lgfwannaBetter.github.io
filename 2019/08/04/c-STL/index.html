@@ -126,14 +126,18 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="map12345678910111213141516#include&amp;lt;map&amp;gt;map&amp;lt;int, string&amp;gt; stu;  // 定义一个map对象map&amp;lt;int, string&amp;gt;::iterator it;  //定义相应的迭代器（用于遍历）//插入元素：用&quot;array&quot;方式插入stu[123] = &quot;student_first&quot;;stu[456] = &quot;st">
+<meta name="keywords" content="Learning,C++">
+<meta property="og:type" content="article">
 <meta property="og:title" content="c++ STL">
 <meta property="og:url" content="http://yoursite.com/2019/08/04/c-STL/index.html">
 <meta property="og:site_name" content="Guofoo&#39;s blog">
+<meta property="og:description" content="map12345678910111213141516#include&amp;lt;map&amp;gt;map&amp;lt;int, string&amp;gt; stu;  // 定义一个map对象map&amp;lt;int, string&amp;gt;::iterator it;  //定义相应的迭代器（用于遍历）//插入元素：用&quot;array&quot;方式插入stu[123] = &quot;student_first&quot;;stu[456] = &quot;st">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-04T13:19:48.729Z">
+<meta property="og:updated_time" content="2019-08-04T13:35:23.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++ STL">
+<meta name="twitter:description" content="map12345678910111213141516#include&amp;lt;map&amp;gt;map&amp;lt;int, string&amp;gt; stu;  // 定义一个map对象map&amp;lt;int, string&amp;gt;::iterator it;  //定义相应的迭代器（用于遍历）//插入元素：用&quot;array&quot;方式插入stu[123] = &quot;student_first&quot;;stu[456] = &quot;st">
 
 
 
@@ -438,10 +442,14 @@
                 
               
 
-              <time title="创建时间：2019-08-04 21:19:48" itemprop="dateCreated datePublished" datetime="2019-08-04T21:19:48+08:00">2019-08-04</time>
+              <time title="创建时间：2019-08-04 21:19:48 / 修改时间：21:35:23" itemprop="dateCreated datePublished" datetime="2019-08-04T21:19:48+08:00">2019-08-04</time>
             </span>
           
 
+          
+            
+
+            
           
 
           
@@ -476,7 +484,15 @@
       
 
       
-        
+        <h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt; stu;  <span class="comment">// 定义一个map对象</span></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt;::iterator it;  <span class="comment">//定义相应的迭代器（用于遍历）</span></span><br><span class="line"><span class="comment">//插入元素：用"array"方式插入</span></span><br><span class="line">stu[<span class="number">123</span>] = <span class="string">"student_first"</span>;</span><br><span class="line">stu[<span class="number">456</span>] = <span class="string">"student_second"</span>;</span><br><span class="line"><span class="comment">//迭代</span></span><br><span class="line"><span class="keyword">for</span>(it=stu.begin();it!=stu.end();it++)&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;it-&gt;first;    <span class="comment">//first表示key</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;it-&gt;second;    <span class="comment">//second表示value</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	begin()指向第一个元素</span></span><br><span class="line"><span class="comment">	end()指向最后一个元素的后一个元素</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; c;</span><br><span class="line"></span><br><span class="line">c.pop_back();       <span class="comment">// 删除最后一个数据。</span></span><br><span class="line">c.push_back(elem);  <span class="comment">// 在尾部加入一个数据。</span></span><br><span class="line"></span><br><span class="line">c.front()     <span class="comment">// 传回第一个数据</span></span><br><span class="line">c.back()      <span class="comment">// 传回最后一个数据</span></span><br><span class="line"></span><br><span class="line">c.erase(pos)  <span class="comment">// 删除pos位置的数据，传回下一个数据的位置。</span></span><br><span class="line">c.insert(pos,elem)    <span class="comment">// 在pos位置插入一个elem拷贝，传回新数据位置。</span></span><br><span class="line"></span><br><span class="line">c.size()           <span class="comment">// 返回容器中实际数据的个数。</span></span><br><span class="line">c.clear()     <span class="comment">// 移除容器中所有数据。</span></span><br><span class="line">c.empty()     <span class="comment">// 判断容器是否为空。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q1;</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">double</span>&gt; q2;</span><br><span class="line"></span><br><span class="line">q.push(x);  <span class="comment">//将x 接到队列的末端。</span></span><br><span class="line">q.pop();  <span class="comment">//弹出队列的第一个元素，注意，没有返回值。</span></span><br><span class="line"></span><br><span class="line">q.front(); <span class="comment">//即最早被压入队列的元素。</span></span><br><span class="line">q.back(); <span class="comment">//即最后被压入队列的元素。</span></span><br><span class="line"></span><br><span class="line">q.size();  </span><br><span class="line">q.empty();  <span class="comment">//当队列空时，返回true。</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -496,6 +512,17 @@
     
 
     <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Learning/" rel="tag"># Learning</a>
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+        </div>
       
 
       
@@ -558,8 +585,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -605,7 +641,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -658,6 +696,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-number">1.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-number">2.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#queue"><span class="nav-number">3.</span> <span class="nav-text">queue</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

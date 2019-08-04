@@ -3,7 +3,11 @@
   <entry>
     <title><![CDATA[c++ STL]]></title>
     <url>%2F2019%2F08%2F04%2Fc-STL%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[map12345678910111213141516#include&lt;map&gt;map&lt;int, string&gt; stu; // 定义一个map对象map&lt;int, string&gt;::iterator it; //定义相应的迭代器（用于遍历）//插入元素：用"array"方式插入stu[123] = "student_first";stu[456] = "student_second";//迭代for(it=stu.begin();it!=stu.end();it++)&#123; cout&lt;&lt;it-&gt;first; //first表示key cout&lt;&lt;it-&gt;second; //second表示value&#125;/* begin()指向第一个元素 end()指向最后一个元素的后一个元素*/ vector123456789101112131415#include&lt;vector&gt;vector&lt;int&gt; c;c.pop_back(); // 删除最后一个数据。c.push_back(elem); // 在尾部加入一个数据。c.front() // 传回第一个数据c.back() // 传回最后一个数据c.erase(pos) // 删除pos位置的数据，传回下一个数据的位置。c.insert(pos,elem) // 在pos位置插入一个elem拷贝，传回新数据位置。c.size() // 返回容器中实际数据的个数。c.clear() // 移除容器中所有数据。c.empty() // 判断容器是否为空。 queue123456789101112#include&lt;queue&gt;queue&lt;int&gt; q1;queue&lt;double&gt; q2;q.push(x); //将x 接到队列的末端。q.pop(); //弹出队列的第一个元素，注意，没有返回值。q.front(); //即最早被压入队列的元素。q.back(); //即最后被压入队列的元素。q.size(); q.empty(); //当队列空时，返回true。]]></content>
+      <tags>
+        <tag>Learning</tag>
+        <tag>C++</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[HDU1263 水果进货单整合(二维map)]]></title>
