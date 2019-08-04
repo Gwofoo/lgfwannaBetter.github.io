@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HDU1262 寻找素数对(我用了vector迭代)]]></title>
+    <url>%2F2019%2F08%2F04%2FHDU1262-%E5%AF%BB%E6%89%BE%E7%B4%A0%E6%95%B0%E5%AF%B9%2F</url>
+    <content type="text"><![CDATA[Description任意取一个偶数,寻找两个素数,使得其和等于该偶数. 要求所寻找的素数对是两个值最相近的. Input输入中是一些偶整数M(5&lt;M&lt;=10000). Output对于每个偶数,输出两个彼此最接近的素数,其和等于该偶数. Sample Input120 30 40 Sample Output1237 1313 1717 23 Code1234567891011121314151617181920212223242526272829303132333435363738#include&lt;iostream&gt;#include&lt;vector&gt;using namespace std;vector&lt;int&gt; v; //存储素数vector&lt;int&gt;::iterator it;bool isPrime(int n)&#123; for(int i=2;i&lt;=n/2;i++)&#123; if(n%i==0) return false; &#125; return true;&#125;void generatePrimes()&#123; for(int i=3;i&lt;10000;i++)&#123; if(isPrime(i))&#123; v.push_back(i); //素数压入vector &#125; &#125;&#125;int main()&#123; generatePrimes(); //先 生成题目范围内的素数 int m; while(cin&gt;&gt;m)&#123; int x,y; for(int i=0;i&lt;v.size();i++)&#123; int t=m-v[i]; for(it=v.begin()+i;it!=v.end();it++)&#123; if(*it==t)&#123; //由于有多个符合条件的素数对，每次都将x,y重新覆盖，即取最后一次结果 x=v[i]; y=t; &#125; &#125; &#125; cout&lt;&lt;x&lt;&lt;' '&lt;&lt;y&lt;&lt;endl; &#125; return 0;&#125;]]></content>
+      <tags>
+        <tag>OJ</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[c++ STL]]></title>
     <url>%2F2019%2F08%2F04%2Fc-STL%2F</url>
     <content type="text"><![CDATA[map12345678910111213141516#include&lt;map&gt;map&lt;int, string&gt; stu; // 定义一个map对象map&lt;int, string&gt;::iterator it; //定义相应的迭代器（用于遍历）//插入元素：用"array"方式插入stu[123] = "student_first";stu[456] = "student_second";//迭代for(it=stu.begin();it!=stu.end();it++)&#123; cout&lt;&lt;it-&gt;first; //first表示key cout&lt;&lt;it-&gt;second; //second表示value&#125;/* begin()指向第一个元素 end()指向最后一个元素的后一个元素*/ vector123456789101112131415#include&lt;vector&gt;vector&lt;int&gt; c;c.pop_back(); // 删除最后一个数据。c.push_back(elem); // 在尾部加入一个数据。c.front() // 传回第一个数据c.back() // 传回最后一个数据c.erase(pos) // 删除pos位置的数据，传回下一个数据的位置。c.insert(pos,elem) // 在pos位置插入一个elem拷贝，传回新数据位置。c.size() // 返回容器中实际数据的个数。c.clear() // 移除容器中所有数据。c.empty() // 判断容器是否为空。 queue123456789101112#include&lt;queue&gt;queue&lt;int&gt; q1;queue&lt;double&gt; q2;q.push(x); //将x 接到队列的末端。q.pop(); //弹出队列的第一个元素，注意，没有返回值。q.front(); //即最早被压入队列的元素。q.back(); //即最后被压入队列的元素。q.size(); q.empty(); //当队列空时，返回true。]]></content>

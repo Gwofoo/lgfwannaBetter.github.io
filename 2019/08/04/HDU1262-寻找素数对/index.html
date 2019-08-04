@@ -126,18 +126,18 @@
 
 
 
-  <meta name="description" content="Markdown是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~">
-<meta name="keywords" content="Learning">
+  <meta name="description" content="Description任意取一个偶数,寻找两个素数,使得其和等于该偶数. 要求所寻找的素数对是两个值最相近的.">
+<meta name="keywords" content="OJ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown Helper">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/Markdown-Helper/index.html">
+<meta property="og:title" content="HDU1262 寻找素数对(我用了vector迭代)">
+<meta property="og:url" content="http://yoursite.com/2019/08/04/HDU1262-寻找素数对/index.html">
 <meta property="og:site_name" content="Guofoo&#39;s blog">
-<meta property="og:description" content="Markdown是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~">
+<meta property="og:description" content="Description任意取一个偶数,寻找两个素数,使得其和等于该偶数. 要求所寻找的素数对是两个值最相近的.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-04T12:01:39.502Z">
+<meta property="og:updated_time" content="2019-08-04T14:51:58.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown Helper">
-<meta name="twitter:description" content="Markdown是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~">
+<meta name="twitter:title" content="HDU1262 寻找素数对(我用了vector迭代)">
+<meta name="twitter:description" content="Description任意取一个偶数,寻找两个素数,使得其和等于该偶数. 要求所寻找的素数对是两个值最相近的.">
 
 
 
@@ -145,7 +145,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/04/Markdown-Helper/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/04/HDU1262-寻找素数对/">
 
 
 
@@ -155,7 +155,7 @@
   };
 </script>
 
-  <title>Markdown Helper | Guofoo's blog</title>
+  <title>HDU1262 寻找素数对(我用了vector迭代) | Guofoo's blog</title>
   
 
 
@@ -399,7 +399,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/04/Markdown-Helper/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/04/HDU1262-寻找素数对/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Guofoo Lee">
@@ -416,7 +416,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown Helper
+          <h1 class="post-title" itemprop="name headline">HDU1262 寻找素数对(我用了vector迭代)
 
               
             
@@ -442,7 +442,7 @@
                 
               
 
-              <time title="创建时间：2019-07-04 19:37:47 / 修改时间：20:01:39" itemprop="dateCreated datePublished" datetime="2019-07-04T19:37:47+08:00">2019-07-04</time>
+              <time title="创建时间：2019-08-04 22:04:40 / 修改时间：22:51:58" itemprop="dateCreated datePublished" datetime="2019-08-04T22:04:40+08:00">2019-08-04</time>
             </span>
           
 
@@ -484,10 +484,17 @@
       
 
       
-        <p><a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">Markdown</a>是一种神奇的标记语言，对我这种格式强迫症患者具有很好的治疗效果！通过简单的标记语法，它可以使普通文本内容具有一定的格式。以下是日常使用总结，持续更新~</p>
+        <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>任意取一个偶数,寻找两个素数,使得其和等于该偶数.</p>
+<p>要求所寻找的素数对是两个值最相近的.</p>
 <a id="more"></a>
 
-<h3 id="Markdown-需要转义的字符"><a href="#Markdown-需要转义的字符" class="headerlink" title="Markdown 需要转义的字符"></a>Markdown 需要转义的字符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\\ 反斜杠</span><br><span class="line">\` 反引号</span><br><span class="line">\* 星号</span><br><span class="line">\_ 下划线</span><br><span class="line">\&#123;\&#125; 大括号</span><br><span class="line">\[\] 中括号</span><br><span class="line">\(\) 小括号</span><br><span class="line">\# 井号</span><br><span class="line">\+ 加号</span><br><span class="line">\- 减号</span><br><span class="line">\. 英文句号</span><br><span class="line">\! 感叹号</span><br></pre></td></tr></table></figure>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>输入中是一些偶整数M(5&lt;M&lt;=10000).</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>对于每个偶数,输出两个彼此最接近的素数,其和等于该偶数.</p>
+<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">20 30 40</span><br></pre></td></tr></table></figure>
+
+<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">7 13</span><br><span class="line">13 17</span><br><span class="line">17 23</span><br></pre></td></tr></table></figure>
+
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;  <span class="comment">//存储素数</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPrime</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n/<span class="number">2</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(n%i==<span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">generatePrimes</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;<span class="number">10000</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(isPrime(i))&#123;</span><br><span class="line">			v.push_back(i);  <span class="comment">//素数压入vector</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	generatePrimes();  <span class="comment">//先 生成题目范围内的素数</span></span><br><span class="line">	<span class="keyword">int</span> m;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;m)&#123;</span><br><span class="line">		<span class="keyword">int</span> x,y;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;v.size();i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> t=m-v[i];</span><br><span class="line">			<span class="keyword">for</span>(it=v.begin()+i;it!=v.end();it++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(*it==t)&#123;</span><br><span class="line">                    <span class="comment">//由于有多个符合条件的素数对，每次都将x,y重新覆盖，即取最后一次结果</span></span><br><span class="line">					x=v[i];   </span><br><span class="line">					y=t;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">' '</span>&lt;&lt;y&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -515,7 +522,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Learning/" rel="tag"># Learning</a>
+            <a href="/tags/OJ/" rel="tag"># OJ</a>
           
         </div>
       
@@ -528,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/04/NexT-Helper/" rel="next" title="NexT Helper">
-                <i class="fa fa-chevron-left"></i> NexT Helper
+              <a href="/2019/08/04/c-STL/" rel="next" title="c++ STL">
+                <i class="fa fa-chevron-left"></i> c++ STL
               </a>
             
           </div>
@@ -537,10 +544,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/07/js学习笔记/" rel="prev" title="js学习笔记">
-                js学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -706,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-需要转义的字符"><span class="nav-number">1.</span> <span class="nav-text">Markdown 需要转义的字符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Input"><span class="nav-number">4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Output"><span class="nav-number">5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">6.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>
