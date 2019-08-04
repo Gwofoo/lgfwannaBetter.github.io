@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Guofoo&#39;s blog">
 <meta property="og:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-04T13:59:59.831Z">
+<meta property="og:updated_time" content="2019-08-03T11:31:43.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT Helper">
 <meta name="twitter:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
@@ -442,13 +442,23 @@
                 
               
 
-              <time title="创建时间：2019-07-04 13:51:18 / 修改时间：21:59:59" itemprop="dateCreated datePublished" datetime="2019-07-04T13:51:18+08:00">2019-07-04</time>
+              <time title="创建时间：2019-07-04 13:51:18" itemprop="dateCreated datePublished" datetime="2019-07-04T13:51:18+08:00">2019-07-04</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-03 19:31:43" itemprop="dateModified" datetime="2019-08-03T19:31:43+08:00">2019-08-03</time>
+              </span>
             
           
 
@@ -489,10 +499,10 @@
 <a id="more"></a>
 
 <h2 id="1、文章设置"><a href="#1、文章设置" class="headerlink" title="1、文章设置"></a>1、文章设置</h2><h3 id="给文章增加标签"><a href="#给文章增加标签" class="headerlink" title="给文章增加标签"></a>给文章增加标签</h3><p>打开文章的.md文件，在最上面写上：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 文章名称</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">	- </span>Tag1</span><br><span class="line"><span class="bullet">	- </span>Tag2</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章名称</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">Tag1</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">Tag2</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="禁用评论"><a href="#禁用评论" class="headerlink" title="禁用评论"></a>禁用评论</h3><p>打开文章的.md文件，在最上面写上：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">comments: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="noopener">Tomorrow Theme</a> 作为代码高亮，共有5款主题供选择。 </p>
 <p>默认使用的是 白色的 <code>normal</code> 主题，可选的值有 :</p>
@@ -501,9 +511,9 @@
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
 
 <h3 id="添加阅读全文按钮"><a href="#添加阅读全文按钮" class="headerlink" title="添加阅读全文按钮"></a>添加阅读全文按钮</h3><p>只需在文章中你想截止的地方添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2、菜单设置"><a href="#2、菜单设置" class="headerlink" title="2、菜单设置"></a>2、菜单设置</h2><h3 id="添加模块"><a href="#添加模块" class="headerlink" title="添加模块"></a>添加模块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页，默认</span><br><span class="line">  archives: /archives/ || archive          //归档，默认</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  #schedule: /schedule/ || calendar        //日程表</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap        //站点地图</span><br><span class="line">  #commonweal: /404/ || heartbeat          //公益404</span><br></pre></td></tr></table></figure>
+<h2 id="2、菜单设置"><a href="#2、菜单设置" class="headerlink" title="2、菜单设置"></a>2、菜单设置</h2><h3 id="添加模块"><a href="#添加模块" class="headerlink" title="添加模块"></a>添加模块</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span>                          <span class="string">//首页，默认</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span>          <span class="string">//归档，默认</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span>           <span class="string">//分类</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span>                     <span class="string">//标签</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span>                   <span class="string">//关于</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
 
 <p>不需要哪个就将其注释掉。</p>
 <p>仅仅这设置的话点击后会类似于404，还要添加相应的页面语句。在blog根目录右键打开git bash，利用</p>
@@ -514,15 +524,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 
 <p>2、打开 <strong>站点配置文件</strong> 找到<code>Extensions</code>在下面添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 搜索</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
 
 <p>3、打开 <strong>主题配置文件</strong> 找到<code>Local search</code>，将<code>enable</code>设置为<code>true</code></p>
 <h2 id="3、主题设置"><a href="#3、主题设置" class="headerlink" title="3、主题设置"></a>3、主题设置</h2><p>我设置的是 <code>pieces</code>， 共有4中可选，默认是<code>Muse</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line"># scheme: Gemini</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="4、头像设置"><a href="#4、头像设置" class="headerlink" title="4、头像设置"></a>4、头像设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">avatar: </span><br><span class="line">	url: #/images/avatar.gif</span><br></pre></td></tr></table></figure>
+<h2 id="4、头像设置"><a href="#4、头像设置" class="headerlink" title="4、头像设置"></a>4、头像设置</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">avatar:</span> </span><br><span class="line">	<span class="attr">url:</span> <span class="comment">#/images/avatar.gif</span></span><br></pre></td></tr></table></figure>
 
 <p>然后将准备好的gif图片放入*next/source/images/中即可。PS：暂时没找到喜欢的图，这个还没弄~</p>
+<h2 id="5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX"><a href="#5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX" class="headerlink" title="5、warning: LF will be replaced by CRLF in XXXXXX"></a>5、warning: LF will be replaced by CRLF in XXXXXX</h2><p>hexo d时遇到这个警告，大概是各平台间的\n\r问题，用一下代码解决：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf false ::永久禁</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -645,7 +658,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -738,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、文章设置"><span class="nav-number">1.</span> <span class="nav-text">1、文章设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章增加标签"><span class="nav-number">1.1.</span> <span class="nav-text">给文章增加标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用评论"><span class="nav-number">1.2.</span> <span class="nav-text">禁用评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">1.3.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">1.4.</span> <span class="nav-text">添加阅读全文按钮</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、菜单设置"><span class="nav-number">2.</span> <span class="nav-text">2、菜单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加模块"><span class="nav-number">2.1.</span> <span class="nav-text">添加模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">2.2.</span> <span class="nav-text">添加搜索功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、主题设置"><span class="nav-number">3.</span> <span class="nav-text">3、主题设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、头像设置"><span class="nav-number">4.</span> <span class="nav-text">4、头像设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、文章设置"><span class="nav-number">1.</span> <span class="nav-text">1、文章设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章增加标签"><span class="nav-number">1.1.</span> <span class="nav-text">给文章增加标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用评论"><span class="nav-number">1.2.</span> <span class="nav-text">禁用评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">1.3.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">1.4.</span> <span class="nav-text">添加阅读全文按钮</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、菜单设置"><span class="nav-number">2.</span> <span class="nav-text">2、菜单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加模块"><span class="nav-number">2.1.</span> <span class="nav-text">添加模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">2.2.</span> <span class="nav-text">添加搜索功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、主题设置"><span class="nav-number">3.</span> <span class="nav-text">3、主题设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、头像设置"><span class="nav-number">4.</span> <span class="nav-text">4、头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX"><span class="nav-number">5.</span> <span class="nav-text">5、warning: LF will be replaced by CRLF in XXXXXX</span></a></li></ol></div>
             
 
           </div>
