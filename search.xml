@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vector应用-ccf1712-2围圈报数]]></title>
+    <url>%2F2019%2F09%2F07%2Fvector%E5%BA%94%E7%94%A8-ccf1712-2%E5%9B%B4%E5%9C%88%E6%8A%A5%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[问题描述​ 1到n号小朋友顺时针坐一圈，围圈报数。​ 若一个小朋友报的数为k的倍数或其末位数（即数的个位）为k，则该小朋友被淘汰。 ​ 当只剩一个小朋友时，该小朋友获胜。 例如，当n=5, k=2时： 1号小朋友报数1； 2号小朋友报数2淘汰； 3号小朋友报数3； 4号小朋友报数4淘汰； 5号小朋友报数5； 1号小朋友报数6淘汰； 3号小朋友报数7； 5号小朋友报数8淘汰； 3号小朋友获胜。 给定n和k，请问最后获胜的小朋友编号为多少？ 输入格式 输入一行，包括两个整数n和k，意义如题目所述。 输出格式 输出一行，包含一个整数，表示获胜的小朋友编号。 样例输入5 2 样例输出3 样例输入7 3 样例输出4 数据规模和约定 对于所有评测用例，1 ≤ n ≤ 1000，1 ≤ k ≤ 9。 分析应用vector和迭代器。 12vector&lt;int&gt;v;vector&lt;int&gt;::iterator it; 开始时，迭代器指向v.begin()，当迭代到v.end()时，重新指向v.begin()，从而做到循环。 当v.size()==1时退出循环。 循环时，若报数报到淘汰值，直接将该元素移出vector：v.erase(it); 。 code123456789101112131415161718192021222324252627282930313233#include&lt;bits/stdc++.h&gt;using namespace std;int a[1005]=&#123;0&#125;; //0游戏中，1出局 int main()&#123; int n,k; cin&gt;&gt;n&gt;&gt;k; vector&lt;int&gt;v; vector&lt;int&gt;::iterator it; //各号小朋友就位 for(int i=1;i&lt;=n;i++)&#123; v.push_back(i); &#125; //游戏开始 int count=0;//报的数 for(it=v.begin();v.size()!=1;)&#123; //vector中晋仅剩一个元素时游戏结束 //迭代器报到末尾，则从头开始报 if(it==v.end()) it=v.begin(); count++; if(count%10==k || count%k==0)&#123; //尾号为k 或 k的倍数 //cout&lt;&lt;*it&lt;&lt;"被淘汰"&lt;&lt;endl; v.erase(it); continue; //删除元素后,后面元素自动往前移，所以迭代器不要增加了！ &#125; it++; &#125; cout&lt;&lt;v[0]&lt;&lt;endl; return 0;&#125;]]></content>
+      <tags>
+        <tag>OJ</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[stack应用-ccf201903-2二十四点]]></title>
     <url>%2F2019%2F09%2F07%2Fstack%E5%BA%94%E7%94%A8-ccf201903-2%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%82%B9%2F</url>
     <content type="text"><![CDATA[题目背景二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。 题目描述定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。 其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为整除，例如 2 / 3 = 0，3 / 2 = 1, 4 / 2 = 2。老师给了你 n 个游戏的解，请你编写程序验证每个游戏的结果是否为 24 。 输入格式从标准输入读入数据。 第一行输入一个整数 n，从第 2 行开始到第 n + 1 行中，每一行包含一个长度为 7的字符串，为上述的 24 点游戏，保证数据格式合法。 输出格式输出到标准输出。 包含 n 行，对于每一个游戏，如果其结果为 24 则输出字符串 Yes，否则输出字符串 No。 样例输入1234567891011109+3+4x35+4x5x57-9-9+85x6/5x43+5+7+91x1+9-91x9-5/98/5+6x96x7-3x66x4+4/5 样例输出12345678910YesNoNoYesYesNoNoNoYesYes 分析使用stack。 先读入第一个数字，入栈。 然后是3次循环，每次循环读一个符号和一个数字。 在一次循环中，读的符号若为 x 或 / ，则弹出栈顶数字，将其与下一位数字作相应运算后再入栈；读的符号若为 + 或 - ，则下一位数字直接入栈，注意：若符号为 - ，入栈时入的是相反数（便于最后一次性相加）。 循环结束后，将栈内剩余的数字依次弹出相加。若为24，则Yes。 Code123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include&lt;bits/stdc++.h&gt;using namespace std;int main()&#123; int n; cin&gt;&gt;n; while(n--)&#123; stack&lt;int&gt; s; int a,b; //读第一个数字，直接push cin&gt;&gt;a; s.push(a); for(int i=0;i&lt;3;i++)&#123; //读一个符号 char c; cin&gt;&gt;c; //读一个数字 cin&gt;&gt;a; int sum; //sum存储乘除运算的中间结果 if(c=='x')&#123; sum=a*s.top(); s.pop(); s.push(sum); &#125; else if(c=='/') &#123; sum=s.top()/a; s.pop(); s.push(sum); &#125; else if(c=='+')&#123; s.push(a); &#125; else&#123; s.push(a*(-1)); &#125; &#125; int count=0; while (!s.empty())&#123; count+=s.top(); //依次弹出相加 s.pop(); &#125; //cout&lt;&lt;count&lt;&lt;endl; if(count==24)&#123; cout&lt;&lt;"Yes"&lt;&lt;endl; &#125; else&#123; cout&lt;&lt;"No"&lt;&lt;endl; &#125; &#125; return 0;&#125;]]></content>
@@ -90,7 +99,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F07%2F02%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Clean1$ hexo clean Generate static files1$ hexo generate More info: Generating Run server1$ hexo server #本地查看 More info: Server Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <tags>
         <tag>Hello World</tag>
       </tags>
