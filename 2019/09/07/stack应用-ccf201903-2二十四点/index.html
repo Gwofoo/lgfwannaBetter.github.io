@@ -126,18 +126,18 @@
 
 
 
-  <meta name="description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
-<meta name="keywords" content="Helper">
+  <meta name="description" content="题目背景二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。 题目描述定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。 其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为整除，例如 2 / 3 = 0，3 / 2 = 1">
+<meta name="keywords" content="OJ,C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NexT Helper">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/NexT-Helper/index.html">
+<meta property="og:title" content="stack应用-ccf201903-2二十四点">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/stack应用-ccf201903-2二十四点/index.html">
 <meta property="og:site_name" content="Guofoo&#39;s blog">
-<meta property="og:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
+<meta property="og:description" content="题目背景二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。 题目描述定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。 其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为整除，例如 2 / 3 = 0，3 / 2 = 1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-03T11:31:43.293Z">
+<meta property="og:updated_time" content="2019-09-07T01:49:21.762Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NexT Helper">
-<meta name="twitter:description" content="嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~ 在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。">
+<meta name="twitter:title" content="stack应用-ccf201903-2二十四点">
+<meta name="twitter:description" content="题目背景二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。 题目描述定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。 其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为整除，例如 2 / 3 = 0，3 / 2 = 1">
 
 
 
@@ -145,7 +145,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/04/NexT-Helper/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/07/stack应用-ccf201903-2二十四点/">
 
 
 
@@ -155,7 +155,7 @@
   };
 </script>
 
-  <title>NexT Helper | Guofoo's blog</title>
+  <title>stack应用-ccf201903-2二十四点 | Guofoo's blog</title>
   
 
 
@@ -399,7 +399,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/04/NexT-Helper/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/07/stack应用-ccf201903-2二十四点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Guofoo Lee">
@@ -416,7 +416,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">NexT Helper
+          <h1 class="post-title" itemprop="name headline">stack应用-ccf201903-2二十四点
 
               
             
@@ -442,23 +442,13 @@
                 
               
 
-              <time title="创建时间：2019-07-04 13:51:18" itemprop="dateCreated datePublished" datetime="2019-07-04T13:51:18+08:00">2019-07-04</time>
+              <time title="创建时间：2019-09-07 09:31:22 / 修改时间：09:49:21" itemprop="dateCreated datePublished" datetime="2019-09-07T09:31:22+08:00">2019-09-07</time>
             </span>
           
 
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-03 19:31:43" itemprop="dateModified" datetime="2019-08-03T19:31:43+08:00">2019-08-03</time>
-              </span>
             
           
 
@@ -494,47 +484,24 @@
       
 
       
-        <p>嘻嘻！装了我很喜欢的也是几乎最热门的主题NexT，但是相关配置还是花了一点时间，现在将一些主要设置写于此博客\便于日后修改~</p>
-<p>在 Hexo 中有<strong>两份</strong>主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。以下设置大部分是对该文件的设置。</p>
+        <h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。</p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。</p>
+<p>其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为<u>整除</u>，例如 2 / 3 = 0，3 / 2 = 1, 4 / 2 = 2。<br>老师给了你 n 个游戏的解，请你编写程序<u>验证</u>每个游戏的结果是否为 24 。</p>
 <a id="more"></a>
 
-<h2 id="1、文章设置"><a href="#1、文章设置" class="headerlink" title="1、文章设置"></a>1、文章设置</h2><h3 id="给文章增加标签"><a href="#给文章增加标签" class="headerlink" title="给文章增加标签"></a>给文章增加标签</h3><p>打开文章的.md文件，在最上面写上：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">文章名称</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">Tag1</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">Tag2</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>从标准输入读入数据。</p>
+<p>第一行输入一个整数 n，从第 2 行开始到第 n + 1 行中，每一行包含一个长度为 7的字符串，为上述的 24 点游戏，保证数据格式合法。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>输出到标准输出。 包含 n 行，对于每一个游戏，如果其结果为 24 则输出字符串 Yes，否则输出字符串 No。</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">9+3+4x3</span><br><span class="line">5+4x5x5</span><br><span class="line">7-9-9+8</span><br><span class="line">5x6/5x4</span><br><span class="line">3+5+7+9</span><br><span class="line">1x1+9-9</span><br><span class="line">1x9-5/9</span><br><span class="line">8/5+6x9</span><br><span class="line">6x7-3x6</span><br><span class="line">6x4+4/5</span><br></pre></td></tr></table></figure>
 
-<h3 id="禁用评论"><a href="#禁用评论" class="headerlink" title="禁用评论"></a>禁用评论</h3><p>打开文章的.md文件，在最上面写上：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br><span class="line">No</span><br><span class="line">No</span><br><span class="line">Yes</span><br><span class="line">Yes</span><br><span class="line">No</span><br><span class="line">No</span><br><span class="line">No</span><br><span class="line">Yes</span><br><span class="line">Yes</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置代码高亮主题"><a href="#设置代码高亮主题" class="headerlink" title="设置代码高亮主题"></a>设置代码高亮主题</h3><p>NexT 使用 <a href="https://github.com/chriskempson/tomorrow-theme" target="_blank" rel="noopener">Tomorrow Theme</a> 作为代码高亮，共有5款主题供选择。 </p>
-<p>默认使用的是 白色的 <code>normal</code> 主题，可选的值有 :</p>
-<p><code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>, 如下图所示：</p>
-<p>修改：在NexT下的_config.yml中设置</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight_theme: normal</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加阅读全文按钮"><a href="#添加阅读全文按钮" class="headerlink" title="添加阅读全文按钮"></a>添加阅读全文按钮</h3><p>只需在文章中你想截止的地方添加</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2、菜单设置"><a href="#2、菜单设置" class="headerlink" title="2、菜单设置"></a>2、菜单设置</h2><h3 id="添加模块"><a href="#添加模块" class="headerlink" title="添加模块"></a>添加模块</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span>                          <span class="string">//首页，默认</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span>          <span class="string">//归档，默认</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span>           <span class="string">//分类</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span>                     <span class="string">//标签</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span>                   <span class="string">//关于</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
-
-<p>不需要哪个就将其注释掉。</p>
-<p>仅仅这设置的话点击后会类似于404，还要添加相应的页面语句。在blog根目录右键打开git bash，利用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags         ::新建标签</span><br><span class="line">$ hexo new page categories   ::新建分类</span><br><span class="line">$ hexo new page about        ::新建关于</span><br></pre></td></tr></table></figure>
-
-<p>在blog/sourse/下新建相关文件。</p>
-<h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><p>1、安装 <a href="https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2Fflashlab%2Fhexo-generator-search" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>2、打开 <strong>站点配置文件</strong> 找到<code>Extensions</code>在下面添加</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">  format:</span> <span class="string">html</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>3、打开 <strong>主题配置文件</strong> 找到<code>Local search</code>，将<code>enable</code>设置为<code>true</code></p>
-<h2 id="3、主题设置"><a href="#3、主题设置" class="headerlink" title="3、主题设置"></a>3、主题设置</h2><p>我设置的是 <code>pieces</code>， 共有4中可选，默认是<code>Muse</code>。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4、头像设置"><a href="#4、头像设置" class="headerlink" title="4、头像设置"></a>4、头像设置</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">avatar:</span> </span><br><span class="line">	<span class="attr">url:</span> <span class="comment">#/images/avatar.gif</span></span><br></pre></td></tr></table></figure>
-
-<p>然后将准备好的gif图片放入*next/source/images/中即可。PS：暂时没找到喜欢的图，这个还没弄~</p>
-<h2 id="5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX"><a href="#5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX" class="headerlink" title="5、warning: LF will be replaced by CRLF in XXXXXX"></a>5、warning: LF will be replaced by CRLF in XXXXXX</h2><p>hexo d时遇到这个警告，大概是各平台间的\n\r问题，用一下代码解决：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf false ::永久禁</span><br></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>使用stack。</p>
+<p>先读入第一个数字，入栈。</p>
+<p>然后是3次循环，每次循环读一个符号和一个数字。</p>
+<p>在一次循环中，读的符号若为 x 或 / ，则弹出栈顶数字，将其与下一位数字作相应运算后再入栈；读的符号若为 + 或 - ，则下一位数字直接入栈，注意：若符号为 - ，入栈时入的是相反数（便于最后一次性相加）。</p>
+<p>循环结束后，将栈内剩余的数字依次弹出相加。若为24，则Yes。</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">while</span>(n--)&#123;</span><br><span class="line">		<span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">		<span class="keyword">int</span>  a,b;</span><br><span class="line">		<span class="comment">//读第一个数字，直接push </span></span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">		s.push(a);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">			<span class="comment">//读一个符号 </span></span><br><span class="line">			<span class="keyword">char</span> c;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;c;</span><br><span class="line">			<span class="comment">//读一个数字 </span></span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">			<span class="keyword">int</span> sum;  <span class="comment">//sum存储乘除运算的中间结果</span></span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">'x'</span>)&#123;			</span><br><span class="line">				sum=a*s.top();</span><br><span class="line">				s.pop();</span><br><span class="line">				s.push(sum);			</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">'/'</span>) &#123;			</span><br><span class="line">				sum=s.top()/a;</span><br><span class="line">				s.pop();</span><br><span class="line">				s.push(sum);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">'+'</span>)&#123;			</span><br><span class="line">				s.push(a);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				s.push(a*(<span class="number">-1</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> count=<span class="number">0</span>; </span><br><span class="line">		<span class="keyword">while</span> (!s.empty())&#123;   </span><br><span class="line">			count+=s.top();  <span class="comment">//依次弹出相加</span></span><br><span class="line">			s.pop();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//cout&lt;&lt;count&lt;&lt;endl;</span></span><br><span class="line">		<span class="keyword">if</span>(count==<span class="number">24</span>)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"No"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -562,7 +529,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/Helper/" rel="tag"># Helper</a>
+            <a href="/tags/OJ/" rel="tag"># OJ</a>
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
           
         </div>
       
@@ -575,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/04/first/" rel="next" title="OJ大数整除">
-                <i class="fa fa-chevron-left"></i> OJ大数整除
+              <a href="/2019/08/04/HDU1262-寻找素数对/" rel="next" title="HDU1262 寻找素数对(我用了vector迭代)">
+                <i class="fa fa-chevron-left"></i> HDU1262 寻找素数对(我用了vector迭代)
               </a>
             
           </div>
@@ -584,10 +553,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/04/Markdown-Helper/" rel="prev" title="Markdown Helper">
-                Markdown Helper <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -753,7 +718,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、文章设置"><span class="nav-number">1.</span> <span class="nav-text">1、文章设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章增加标签"><span class="nav-number">1.1.</span> <span class="nav-text">给文章增加标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁用评论"><span class="nav-number">1.2.</span> <span class="nav-text">禁用评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置代码高亮主题"><span class="nav-number">1.3.</span> <span class="nav-text">设置代码高亮主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读全文按钮"><span class="nav-number">1.4.</span> <span class="nav-text">添加阅读全文按钮</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、菜单设置"><span class="nav-number">2.</span> <span class="nav-text">2、菜单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加模块"><span class="nav-number">2.1.</span> <span class="nav-text">添加模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加搜索功能"><span class="nav-number">2.2.</span> <span class="nav-text">添加搜索功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、主题设置"><span class="nav-number">3.</span> <span class="nav-text">3、主题设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、头像设置"><span class="nav-number">4.</span> <span class="nav-text">4、头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、warning-LF-will-be-replaced-by-CRLF-in-XXXXXX"><span class="nav-number">5.</span> <span class="nav-text">5、warning: LF will be replaced by CRLF in XXXXXX</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目背景"><span class="nav-number">1.</span> <span class="nav-text">题目背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入格式"><span class="nav-number">3.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出格式"><span class="nav-number">4.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例输入"><span class="nav-number">5.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样例输出"><span class="nav-number">6.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">7.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">8.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>

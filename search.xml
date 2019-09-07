@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[stack应用-ccf201903-2二十四点]]></title>
+    <url>%2F2019%2F09%2F07%2Fstack%E5%BA%94%E7%94%A8-ccf201903-2%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[题目背景二十四点：使用 3 个加减乘除运算使得 4张纸牌上数字的运算结果为 24。 题目描述定义每一个游戏由 4 个从 1-9 的数字和 3个四则运算符组成，保证四则运算符将数字两两隔开，不存在括号和其他字符，运算顺序按照四则运算顺序进行。 其中加法用符号 + 表示，减法用符号 -表示，乘法用小写字母 x 表示，除法用符号 / 表示。在游戏里除法为整除，例如 2 / 3 = 0，3 / 2 = 1, 4 / 2 = 2。老师给了你 n 个游戏的解，请你编写程序验证每个游戏的结果是否为 24 。 输入格式从标准输入读入数据。 第一行输入一个整数 n，从第 2 行开始到第 n + 1 行中，每一行包含一个长度为 7的字符串，为上述的 24 点游戏，保证数据格式合法。 输出格式输出到标准输出。 包含 n 行，对于每一个游戏，如果其结果为 24 则输出字符串 Yes，否则输出字符串 No。 样例输入1234567891011109+3+4x35+4x5x57-9-9+85x6/5x43+5+7+91x1+9-91x9-5/98/5+6x96x7-3x66x4+4/5 样例输出12345678910YesNoNoYesYesNoNoNoYesYes 分析使用stack。 先读入第一个数字，入栈。 然后是3次循环，每次循环读一个符号和一个数字。 在一次循环中，读的符号若为 x 或 / ，则弹出栈顶数字，将其与下一位数字作相应运算后再入栈；读的符号若为 + 或 - ，则下一位数字直接入栈，注意：若符号为 - ，入栈时入的是相反数（便于最后一次性相加）。 循环结束后，将栈内剩余的数字依次弹出相加。若为24，则Yes。 Code123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354#include&lt;bits/stdc++.h&gt;using namespace std;int main()&#123; int n; cin&gt;&gt;n; while(n--)&#123; stack&lt;int&gt; s; int a,b; //读第一个数字，直接push cin&gt;&gt;a; s.push(a); for(int i=0;i&lt;3;i++)&#123; //读一个符号 char c; cin&gt;&gt;c; //读一个数字 cin&gt;&gt;a; int sum; //sum存储乘除运算的中间结果 if(c=='x')&#123; sum=a*s.top(); s.pop(); s.push(sum); &#125; else if(c=='/') &#123; sum=s.top()/a; s.pop(); s.push(sum); &#125; else if(c=='+')&#123; s.push(a); &#125; else&#123; s.push(a*(-1)); &#125; &#125; int count=0; while (!s.empty())&#123; count+=s.top(); //依次弹出相加 s.pop(); &#125; //cout&lt;&lt;count&lt;&lt;endl; if(count==24)&#123; cout&lt;&lt;"Yes"&lt;&lt;endl; &#125; else&#123; cout&lt;&lt;"No"&lt;&lt;endl; &#125; &#125; return 0;&#125;]]></content>
+      <tags>
+        <tag>OJ</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HDU1262 寻找素数对(我用了vector迭代)]]></title>
     <url>%2F2019%2F08%2F04%2FHDU1262-%E5%AF%BB%E6%89%BE%E7%B4%A0%E6%95%B0%E5%AF%B9%2F</url>
     <content type="text"><![CDATA[Description任意取一个偶数,寻找两个素数,使得其和等于该偶数. 要求所寻找的素数对是两个值最相近的. Input输入中是一些偶整数M(5&lt;M&lt;=10000). Output对于每个偶数,输出两个彼此最接近的素数,其和等于该偶数. Sample Input120 30 40 Sample Output1237 1313 1717 23 Code1234567891011121314151617181920212223242526272829303132333435363738#include&lt;iostream&gt;#include&lt;vector&gt;using namespace std;vector&lt;int&gt; v; //存储素数vector&lt;int&gt;::iterator it;bool isPrime(int n)&#123; for(int i=2;i&lt;=n/2;i++)&#123; if(n%i==0) return false; &#125; return true;&#125;void generatePrimes()&#123; for(int i=3;i&lt;10000;i++)&#123; if(isPrime(i))&#123; v.push_back(i); //素数压入vector &#125; &#125;&#125;int main()&#123; generatePrimes(); //先 生成题目范围内的素数 int m; while(cin&gt;&gt;m)&#123; int x,y; for(int i=0;i&lt;v.size();i++)&#123; int t=m-v[i]; for(it=v.begin()+i;it!=v.end();it++)&#123; if(*it==t)&#123; //由于有多个符合条件的素数对，每次都将x,y重新覆盖，即取最后一次结果 x=v[i]; y=t; &#125; &#125; &#125; cout&lt;&lt;x&lt;&lt;' '&lt;&lt;y&lt;&lt;endl; &#125; return 0;&#125;]]></content>
