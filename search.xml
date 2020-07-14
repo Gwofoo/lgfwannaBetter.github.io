@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[zcy520]]></title>
+    <url>%2F2020%2F07%2F14%2Fzcy520%2F</url>
+    <content type="text"><![CDATA[三行情书一则12345678if (you.Love(me) || !you.Love(me))&#123; me.love.value++; me.love.value--;&#125; //你爱，或者不爱我//爱就在那里//不增不减 嘤嘤嘤我爱卓晨怡]]></content>
+      <tags>
+        <tag>努力学习的动力</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[OJ-字符串回文的最少调整次数（贪心）]]></title>
     <url>%2F2020%2F04%2F07%2FOJ-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9B%9E%E6%96%87%E7%9A%84%E6%9C%80%E5%B0%91%E8%B0%83%E6%95%B4%E6%AC%A1%E6%95%B0%2F</url>
     <content type="text"><![CDATA[原题链接http://lx.lanqiao.cn/problem.page?gpid=T60 问题描述 给你一个串，计算最少的交换次数使得该串变成一个回文串。 ​ 交换的定义是：交换两个相邻的字符 例如mamad 第一次交换 ad : mamda 第二次交换 md : madma 第三次交换 ma : madam (回文！完美！) 输入格式 第一行是一个整数N，表示接下来的字符串的长度(N &lt;= 8000) 第二行是一个字符串，长度为N。只包含小写字母 输出格式 如果可能，输出最少的交换次数。 否则输出Impossible 样例输入5mamad 样例输出3 分析Impossible的两种情况n为奇数时，如果已经有一个字符只出现1次，还找到了另一个字符只出现1次，那么就直接Impossible。 n为偶数时，只要找到有一个字符只出现1次，那么就直接Impossible。 最小的交换次数设定两个指针start和end，初始时分别指向该字符串的头和尾。 以start为基准，从end往前找第一个和它相同的字符，如果找到了，就将找到的字符交换到end位置，在下一次遍历时，就可以不用管刚才已经交换好的那来两个字符，下一次以start++为基准，从end--开始遍历，执行和上述相同的操作。 如果 n 为奇数，在字符串的某一个位置找到了那个只出现1次的字符，我们不必将字符现在就交换到中间位置，而是先计算它到中间位置需要交换的次数，然后累加到 sum 中，将剩下的字符都交换到对称后，再交换这个字符即可。 代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&lt;bits/stdc++.h&gt;using namespace std;int N; //字符串长度string str; int start,endd; int sum=0;int twoLeft=0; //置为1表示已有1个单字符，必Impossible//把str[i]逐步移动到str[j]void move(int i,int j)&#123; for(int k=i;k&lt;j;k++)&#123; swap(str[k],str[k+1]); sum++; &#125;&#125;int main()&#123; cin&gt;&gt;N&gt;&gt;str; start=0; endd=N-1; while(start&lt;endd)&#123; for(int i=endd;i&gt;=start;i--)&#123; //该字符为单字符 if(i==start)&#123; //总长为偶数或有两个单独字符，必Impossible if(N%2==0 || twoLeft)&#123; cout&lt;&lt;"Impossible"&lt;&lt;endl; return 0; &#125; sum+=(N)/2-start; //该字符到中间位置的距离累加到sum中，但不移动 start++; twoLeft=1; break; &#125; //遇到最末的相同字符，需要交换 if(str[i]==str[start])&#123; //cout&lt;&lt;"交换"&lt;&lt;i&lt;&lt;"到"&lt;&lt;endd&lt;&lt;endl; move(i,endd); start++; endd--; break; &#125; &#125; &#125; cout&lt;&lt;sum; return 0;&#125;]]></content>
